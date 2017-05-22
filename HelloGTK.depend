@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1495467930 source:/home/luis/Escritorio/HelloGTK/main.c
+1495476768 source:/home/luis/Escritorio/HelloGTK/main.c
 	<stdlib.h>
 	<gtk/gtk.h>
 
