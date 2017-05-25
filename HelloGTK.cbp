@@ -35,6 +35,8 @@
 		<Linker>
 			<Add option="`pkg-config gtk+-2.0 --libs`" />
 		</Linker>
+		<Unit filename="Button.h" />
+		<Unit filename="Window.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1495490540 source:/home/luis/Escritorio/HelloGTK/main.c
+1495749636 source:/home/luis/Escritorio/HelloGTK/main.c
 	<stdlib.h>
 	<gtk/gtk.h>
+	"Window.h"
+	"Button.h"
 
 1457361942 /usr/include/gtk-2.0/gtk/gtk.h
 	<gdk/gdk.h>
@@ -2522,4 +2524,15 @@
 
 1457361942 /usr/include/gtk-2.0/gtk/gtktipsquery.h
 	<gtk/gtk.h>
+
+1495749949 /home/luis/Escritorio/HelloGTK/Window.h
+	<stdlib.h>
+	<stdio.h>
+	<gtk/gtk.h>
+
+1495746997 /home/luis/Escritorio/HelloGTK/Button.h
+	<stdlib.h>
+	<stdio.h>
+	<gtk/gtk.h>
+	"Window.h"
 

@@ -1,56 +1,71 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
+#include "Window.h"
+#include "Button.h"
 
-static void callback(GtkWidget* widget, gpointer data)
+
+struct Paramatro{
+    gchar* cadena;
+    gint numero;
+};
+
+void hello(gpointer data[])
 {
-    g_print("- Hello El boton - %s ha sido presionado\n", (gchar *)data);
+    gchar* dir;
+
+    dir = gtk_entry_get_text(GTK_ENTRY(data[0]));
+
+    g_print("Hello World!\n");
+    g_print(dir);
 }
 
-static gboolean delete_event(GtkWidget* widget, GdkEvent* event, gpointer data)
+void destroy()
 {
     gtk_main_quit();
-
-    return FALSE;
 }
 
-static void nuevo_boton(GtkWidget* window, gchar* data)
+int
+main (int argc, char *argv[])
 {
-    GtkWidget* button;
-    GtkWidget* box;
-
-    box = gtk_hbox_new(FALSE, 30);
-    gtk_container_add(GTK_CONTAINER(window), box);
-
-    button = gtk_button_new_with_label(data);
-    gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-
-    gtk_widget_show(box);
-    gtk_widget_show(button);
-}
-
-static void nueva_ventana(GtkWidget* window, gchar* data, gint tamanio_ventana)
-{
-    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title(GTK_WINDOW(window), data);
-    g_signal_connect(window, "delete-event", G_CALLBACK(delete_event), NULL);
-    gtk_container_border_width(GTK_CONTAINER(window), tamanio_ventana);
-
-    nuevo_boton(window, "LUIS");
-
-    gtk_widget_show(window);
-}
+//    GtkWidget *window;
+//    GtkWidget *button;
+//
+//    gtk_init (&argc, &argv);
+//
+//    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+//    gtk_signal_connect (GTK_OBJECT (window), "destroy", GTK_SIGNAL_FUNC(destroy), NULL);
+//    gtk_container_border_width (GTK_CONTAINER (window), 100);
+//
+//    button = gtk_button_new_with_label ("Hello World");
+//
+//    gtk_signal_connect (GTK_OBJECT (button), "clicked", GTK_SIGNAL_FUNC (hello), data);
+//    gtk_signal_connect_object (GTK_OBJECT (button), "clicked", GTK_SIGNAL_FUNC (gtk_widget_destroy), GTK_OBJECT (window));
+//    gtk_container_add (GTK_CONTAINER (window), button);
+//
+//    gtk_widget_show (button);
+//    gtk_widget_show (window);
 
 
-int main(int argc, char *argv[])
-{
-    GtkWidget* window;
+    _Window* window;
+    _Window* window1;
+//    GtkWidget *window;
+    GtkWidget *button;
 
     gtk_init(&argc, &argv);
-    nueva_ventana(window, "Mi Ventana", 240);
 
-//    gtk_widget_show(window);
+    new_window(&window, "Principal", 150);
+    new_window(&window1, "Secundaria", 150);
+//    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+//    gtk_signal_connect (GTK_OBJECT (window), "destroy", GTK_SIGNAL_FUNC(destroy), NULL);
+//    gtk_container_border_width (GTK_CONTAINER (window), 100);
 
-    gtk_main();
+    window_show(&window);
+    window_show(&window1);
+
+    gtk_main ();
+
+    return 0;
 }
+
 
 //https://developer.gnome.org/gtk-tutorial/stable/x344.html
