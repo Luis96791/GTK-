@@ -2,6 +2,8 @@
 1495809258 source:/home/luis/Escritorio/HanoiTowers/main.cpp
 	<iostream>
 
-1495820180 source:/home/luis/Escritorio/HelloGTK/HanoiTowers/main.cpp
+1495822606 source:/home/luis/Escritorio/HelloGTK/HanoiTowers/main.cpp
+	<stdio.h>
+	<stdlib.h>
 	<iostream>
 
