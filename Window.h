@@ -22,7 +22,7 @@ static void new_window(_Window* window, gchar* data, gint _size)
     window->window_widget = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(window->window_widget), data);
     g_signal_connect(GTK_OBJECT(window->window_widget), "delete-event", GTK_SIGNAL_FUNC(delete_event), NULL);
-//    gtk_container_border_width(GTK_CONTAINER(window->window_widget), _size);
+    gtk_container_border_width(GTK_CONTAINER(window->window_widget), _size);
     gtk_window_set_default_size(GTK_WINDOW(window->window_widget), 300, 200);
 
     g_print("DEUCE");

@@ -50,11 +50,14 @@ main (int argc, char *argv[])
     _Window* window1;
 //    GtkWidget *window;
     GtkWidget *button;
+    gpointer* data[2];
+
+//    data[]
 
     gtk_init(&argc, &argv);
 
     new_window(&window, "Principal", 150);
-    new_window(&window1, "Secundaria", 150);
+//    new_window_secondary(&window1, );
 //    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 //    gtk_signal_connect (GTK_OBJECT (window), "destroy", GTK_SIGNAL_FUNC(destroy), NULL);
 //    gtk_container_border_width (GTK_CONTAINER (window), 100);

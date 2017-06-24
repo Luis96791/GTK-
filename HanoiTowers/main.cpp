@@ -19,7 +19,7 @@ class Hanoi{
             if(numero > 0)
             {
                 hanoi((numero - 1), torre1, torre3, torre2);
-                printf("%d. Moviendo el disco de la torre %d a la torre %d \n", ++movimientos, torre1, torre3);
+                printf("%lu. Moviendo el disco de la torre %d a la torre %d \n", ++movimientos, torre1, torre3);
                 hanoi((numero - 1), torre2, torre1, torre3);
             }
         }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1495749636 source:/home/luis/Escritorio/HelloGTK/main.c
+1496095661 source:/home/luis/Escritorio/HelloGTK/main.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Window.h"
@@ -2525,7 +2525,7 @@
 1457361942 /usr/include/gtk-2.0/gtk/gtktipsquery.h
 	<gtk/gtk.h>
 
-1495749949 /home/luis/Escritorio/HelloGTK/Window.h
+1496871944 /home/luis/Escritorio/HelloGTK/Window.h
 	<stdlib.h>
 	<stdio.h>
 	<gtk/gtk.h>

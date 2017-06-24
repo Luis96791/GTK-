@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1498263822 source:/home/luis/Escritorio/Grafo/Grafo.cpp
+	"Grafo.h"
+
+1498263990 /home/luis/Escritorio/Grafo/Grafo.h
+	<stdio.h>
+	<stdlib.h>
+	"Vertice.h"
+
+1498253126 /home/luis/Escritorio/Grafo/Vertice.h
+
+1498257810 source:/home/luis/Escritorio/Grafo/main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"Grafo.h"
+
+1498255434 source:/home/luis/Escritorio/Grafo/Vertice.cpp
+	"Vertice.h"
+
